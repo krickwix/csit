@@ -34,6 +34,7 @@
 | ...
 | Force Tags | HC_FUNC
 
+
 *** Test Cases ***
 | TC01: Honeycomb can configure NSH entry
 | | [Documentation] | Check if Honeycomb can configure an NSH entry.
