@@ -1,0 +1,125 @@
+---
+metadata:
+  version: 0.1
+  schema:
+    - resources/topology_schemas/3_node_topology.sch.yaml
+    - resources/topology_schemas/topology.sch.yaml
+  tags: [hw, 3-node]
+
+nodes:
+  TG:
+    type: TG
+    subtype: TREX
+    host: "172.21.174.39"
+    port: 22
+    username: testuser
+    password: Cisco1234
+    interfaces:
+      port1:
+        # t2-tg1-c1/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:3e:97:f4"
+        pci_address: "0000:04:00.0"
+        link: link1
+        model: Intel-X520-DA2
+      port2:
+        # t2-tg1-c1/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:3e:97:f5"
+        pci_address: "0000:04:00.1"
+        link: link2
+        model: Intel-X520-DA2
+      port3:
+        # t2-tg1-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:26:f2:40"
+        pci_address: "0000:08:00.0"
+        link: link3
+        model: Intel-X520-DA2
+      port4:
+        # t2-tg1-c2/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:26:f2:41"
+        pci_address: "0000:08:00.1"
+        link: link4
+        model: Intel-X520-DA2
+#      port5:
+#        # t2-tg1-c3/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+#        mac_address: "90:e2:ba:3e:93:70"
+#        pci_address: "0000:06:00.0"
+#        link: link5
+#        model: Intel-X520-DA2
+#      port6:
+#        # t2-tg1-c3/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+#        mac_address: "90:e2:ba:3e:93:71"
+#        pci_address: "0000:06:00.1"
+#        link: link6
+#        model: Intel-X520-DA2
+  DUT1:
+    type: DUT
+    host: "172.21.174.38"
+    port: 22
+    username: testuser
+    password: Cisco1234
+    honeycomb:
+      user: admin
+      passwd: admin
+      port: 8183
+      netconf_port: 2831
+    interfaces:
+      port1:
+        # t2-sut1-c1/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:38"
+        pci_address: "0000:04:00.0"
+        link: link21
+        model: Intel-X520-DA2
+      port2:
+        # t2-sut1-c1/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:39"
+        pci_address: "0000:04:00.1"
+        link: link1
+        model: Intel-X520-DA2
+      port3:
+        # t2-sut1-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:3c"
+        pci_address: "0000:07:00.0"
+        link: link22
+        model: Intel-X520-DA2
+      port4:
+        # t2-sut1-c2/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:3d"
+        pci_address: "0000:07:00.1"
+        link: link3
+        model: Intel-X520-DA2
+  DUT2:
+    type: DUT
+    host: "172.21.174.33"
+    port: 22
+    username: testuser
+    password: Cisco1234
+    honeycomb:
+      user: admin
+      passwd: admin
+      port: 8183
+      netconf_port: 2831
+    interfaces:
+      port1:
+        # t2-sut2-c1/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:6d:49:44"
+        pci_address: "0000:04:00.0"
+        link: link2
+        model: Intel-X520-DA2
+      port2:
+        # t2-sut2-c1/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:6d:49:45"
+        pci_address: "0000:04:00.1"
+        link: link21
+        model: Intel-X520-DA2
+      port3:
+        # t2-sut2-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:6d:4b:78"
+        pci_address: "0000:07:00.0"
+        link: link4
+        model: Intel-X520-DA2
+      port4:
+        # t2-sut2-c2/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:6d:4b:79"
+        pci_address: "0000:07:00.1"
+        link: link22
+        model: Intel-X520-DA2

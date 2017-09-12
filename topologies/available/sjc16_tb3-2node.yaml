@@ -1,0 +1,89 @@
+---
+metadata:
+  version: 0.1
+  schema:
+    - resources/topology_schemas/3_node_topology.sch.yaml
+    - resources/topology_schemas/topology.sch.yaml
+  tags: [hw, 3-node]
+
+nodes:
+  TG:
+    type: TG
+    subtype: TREX
+    host: "172.21.174.34"
+    port: 22
+    username: testuser
+    password: Cisco1234
+    interfaces:
+      port1:
+        # t1-tg1-c1/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+          mac_address: "90:e2:ba:35:64:d0"
+        pci_address: "0000:04:00.0"
+        link: link1
+        model: Intel-X520-DA2
+      port2:
+        # t1-tg1-c1/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:35:64:d1"
+        pci_address: "0000:04:00.1"
+        link: link2
+        model: Intel-X520-DA2
+      port3:
+        # t1-tg1-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+          mac_address: "90:e2:ba:35:44:3c"
+        pci_address: "0000:07:00.0"
+        link: link3
+        model: Intel-X520-DA2
+      port4:
+        # t1-tg1-c2/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "?"
+        pci_address: "90:e2:ba:35:44:3d"
+        link: link4
+        model: Intel-X520-DA2
+#      port5:
+#        # t1-tg1-c3/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+#        mac_address: "90:e2:ba:26:f1:9c"
+#        pci_address: "0000:06:00.0"
+#        link: link5
+#        model: Intel-X520-DA2
+#      port6:
+#        # t1-tg1-c3/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+#        mac_address: "90:e2:ba:26:f1:9d"
+#        pci_address: "0000:06:00.1"
+#        link: link6
+#        model: Intel-X520-DA2
+  DUT1:
+    type: DUT
+    host: "172.21.174.36"
+    port: 22
+    username: testuser
+    password: Cisco1234
+    honeycomb:
+      user: admin
+      passwd: admin
+      port: 8183
+      netconf_port: 2831
+    interfaces:
+      port1:
+        # t2-sut1-c1/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:c0"
+        pci_address: "0000:04:00.0"
+        link: link2
+        model: Intel-X520-DA2
+      port2:
+        # t2-sut1-c1/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:38:33:c1"
+        pci_address: "0000:04:00.1"
+        link: link1
+        model: Intel-X520-DA2
+      port3:
+        # t2-sut1-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:59:1b:28"
+        pci_address: "0000:07:00.0"
+        link: link4
+        model: Intel-X520-DA2
+      port4:
+        # t2-sut1-c2/p2 - 10GE port2 on Intel NIC x520 2p10GE.
+        mac_address: "90:e2:ba:59:1b:29"
+        pci_address: "0000:07:00.0"
+        link: link3
+        model: Intel-X520-DA2
