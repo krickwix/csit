@@ -19,7 +19,7 @@ set -x
 #            topologies/available/lf_testbed2.yaml \
 #            topologies/available/lf_testbed3.yaml"
 
-TOPOLOGIES="sjc16_tb2-3node.yaml"
+TOPOLOGIES="topologies/available/sjc16_tb2-3node.yaml"
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
