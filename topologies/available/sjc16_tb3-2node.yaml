@@ -29,7 +29,7 @@ nodes:
         model: Intel-X520-DA2
       port3:
         # t1-tg1-c2/p1 - 10GE port1 on Intel NIC x520 2p10GE.
-          mac_address: "90:e2:ba:35:44:3c"
+        mac_address: "90:e2:ba:35:44:3c"
         pci_address: "0000:07:00.0"
         link: link3
         model: Intel-X520-DA2
