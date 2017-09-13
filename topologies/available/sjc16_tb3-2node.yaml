@@ -4,7 +4,7 @@ metadata:
   schema:
     - resources/topology_schemas/3_node_topology.sch.yaml
     - resources/topology_schemas/topology.sch.yaml
-  tags: [hw, 3-node]
+  tags: [hw, 2-node]
 
 nodes:
   TG:
