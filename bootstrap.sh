@@ -50,11 +50,9 @@ else
     SHARED_MEMORY_PATH="/run/shm"
 fi
 
-VIRL_SERVERS=("10.60.16.22" "10.60.16.23")
-IPS_PER_VIRL=( "10.60.16.22:100"
-               "10.60.16.23:100" )
-SIMS_PER_VIRL=( "10.60.16.22:13"
-               "10.60.16.23:13" )
+VIRL_SERVERS=( "10.60.16.23" )
+IPS_PER_VIRL=( "10.60.16.23:100" )
+SIMS_PER_VIRL=( "10.60.16.23:13" )
 IPS_PER_SIMULATION=5
 
 function get_max_ip_nr() {
